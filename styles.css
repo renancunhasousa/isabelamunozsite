@@ -1,0 +1,1170 @@
+:root {
+    --primary-color: #5FB4B6;
+    --secondary-color: #F3A950;
+    --text-color: #333333;
+    --background-color: #FFF8F3;
+    --white: #FFFFFF;
+    --gradient-bg: linear-gradient(90deg, var(--white) 0%, var(--background-color) 100%);
+    --light-bg: #FFF8F3;
+    --section-spacing: 120px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    color: var(--text-color);
+    background: var(--gradient-bg);
+}
+
+/* Navegação atualizada */
+.nav-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 40px;
+    background: white;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.left-nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-container img {
+    height: 35px;
+}
+
+.brand-name {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--text-color);
+    white-space: nowrap;
+}
+
+.separator {
+    color: #ddd;
+    font-size: 1.5rem;
+    padding: 0 10px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 40px;
+    list-style: none;
+    margin: 0 40px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.social-icons {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    margin-left: auto;
+}
+
+.social-icon img {
+    height: 24px;
+    width: auto;
+    transition: transform 0.3s ease;
+}
+
+.social-icon:hover img {
+    transform: scale(1.1);
+}
+
+.whatsapp-button {
+    background: #25D366;
+    color: white;
+    padding: 8px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.whatsapp-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.2);
+}
+
+/* Seção de contato atualizada */
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.contact-item {
+    text-align: center;
+    padding: 30px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.contact-item:hover {
+    transform: translateY(-5px);
+}
+
+.contact-item i {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.contact-item h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: var(--text-color);
+}
+
+.contact-item p {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.map-container {
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    margin: 0 auto;
+    max-width: 1000px;
+}
+
+/* Formulário de contato */
+.contact-form {
+    padding: 100px 0;
+    background: var(--gradient-bg);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Adicionar imagem de fundo */
+.contact-form::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('assets/images/fundo3.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.08;
+    z-index: 1;
+}
+
+/* Garantir que o conteúdo fique acima do fundo */
+.contact-form > * {
+    position: relative;
+    z-index: 2;
+}
+
+.contact-form h2 {
+    text-align: center;
+    font-size: 3.8rem;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    font-weight: 700;
+    background: linear-gradient(90deg, var(--text-color) 0%, var(--primary-color) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.contact-form .subtitle {
+    text-align: center;
+    color: #666;
+    margin-bottom: 50px;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.form-group textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+.submit-button {
+    background: linear-gradient(45deg, var(--primary-color), #7CCFD1);
+    color: white;
+    border: none;
+    padding: 15px 40px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    display: block;
+    margin: 0 auto;
+}
+
+.submit-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(95, 180, 182, 0.3);
+}
+
+/* Ajuste responsivo */
+@media (max-width: 1200px) {
+    .left-nav {
+        padding: 0 20px;
+    }
+
+    .nav-links {
+        gap: 30px;
+        margin: 0 20px;
+    }
+}
+
+@media (max-width: 992px) {
+    .brand-name {
+        display: none;
+    }
+
+    .nav-links {
+        gap: 20px;
+    }
+}
+
+/* Hero Section */
+.hero {
+    padding-top: 100px;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: var(--gradient-bg);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Imagem de fundo de alimentação saudável */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('assets/images/photo1.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.08;
+    z-index: 1;
+}
+
+.hero-content {
+    max-width: 1400px; /* Aumentado para dar mais espaço */
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1.2fr; /* Aumentada a proporção da imagem */
+    gap: 60px;
+    padding: 0 40px;
+    position: relative;
+    z-index: 2;
+}
+
+.hero-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero-text h1 {
+    font-size: 3.8rem; /* Aumentado o tamanho */
+    line-height: 1.2;
+    margin-bottom: 30px;
+    font-weight: 700;
+    background: linear-gradient(90deg, var(--text-color) 0%, var(--primary-color) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-text p {
+    font-size: 1.4rem;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+.hero-image {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.hero-image img {
+    width: 120%; /* Aumentado o tamanho */
+    max-width: none;
+    height: auto;
+    object-fit: cover;
+    transform: translateX(5%); /* Ajuste fino da posição */
+}
+
+.cta-button {
+    display: inline-block;
+    background: linear-gradient(45deg, var(--primary-color) 0%, #7CCFD1 100%);
+    color: white;
+    padding: 18px 45px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(95, 180, 182, 0.3),
+                0 8px 25px rgba(95, 180, 182, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.2) 100%);
+    transform: translateY(-100%);
+    transition: transform 0.3s ease;
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(95, 180, 182, 0.4),
+                0 10px 30px rgba(95, 180, 182, 0.3);
+}
+
+.cta-button:hover::before {
+    transform: translateY(0);
+}
+
+/* Sobre */
+.about {
+    position: relative;
+    z-index: 3;
+    padding-top: 100px;
+    background-color: var(--white); /* Adicionado para combinar com a curva */
+}
+
+.about-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    padding: 0 40px;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+.credentials {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.credential-item {
+    text-align: center;
+}
+
+.credential-item .number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    display: block;
+}
+
+/* Planos */
+.plans {
+    position: relative;
+    z-index: 3;
+    padding: 100px 0;
+    background: var(--light-bg); /* Garantir que o fundo combine com as seções adjacentes */
+}
+
+.plans .background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('assets/images/fundo2.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.08;
+    z-index: 1;
+}
+
+.plans > * {
+    position: relative;
+    z-index: 2;
+}
+
+.plan-card {
+    background: linear-gradient(135deg, 
+        var(--white) 0%, 
+        rgba(255, 248, 243, 0.5) 100%
+    );
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 40px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 450px; /* Altura mínima para alinhar os botões */
+}
+
+.plan-header {
+    margin-bottom: 30px;
+}
+
+.plan-header h3 {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.plan-header .price {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.plan-button {
+    display: inline-block;
+    background: var(--primary-color);
+    color: white;
+    padding: 15px 40px;
+    border-radius: 25px;
+    text-decoration: none;
+    margin-top: 30px;
+    font-weight: 500;
+    box-shadow: 0 4px 15px rgba(95, 180, 182, 0.2);
+}
+
+/* Divisor curvo animado */
+.curve-divider {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+    margin-top: -100px;
+}
+
+.curve-divider svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 150px;
+    animation: wave 20s linear infinite;
+}
+
+@keyframes wave {
+    0% { transform: translateX(0); }
+    50% { transform: translateX(-25%); }
+    100% { transform: translateX(0); }
+}
+
+/* Seção Sobre com forma orgânica */
+.shape-wrapper {
+    position: relative;
+    width: 100%;
+    padding-bottom: 100%;
+}
+
+.shape-wrapper::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, var(--primary-color), #7CCFD1);
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    animation: morph 8s ease-in-out infinite;
+}
+
+.about-img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    animation: morph 8s ease-in-out infinite;
+}
+
+@keyframes morph {
+    0% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+    50% { border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%; }
+    100% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+}
+
+.about-content {
+    padding: 40px;
+}
+
+.mission-text {
+    margin-top: 30px;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #666;
+    animation: fadeInUp 1s ease-out;
+}
+
+/* Efeitos de movimento na página */
+.about-content h2,
+.about-content p {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.about-content h2 { animation-delay: 0.2s; }
+.about-content .highlight { animation-delay: 0.4s; }
+.about-content p:not(.highlight):not(.mission-text) { animation-delay: 0.6s; }
+.about-content .mission-text { animation-delay: 0.8s; }
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+    :root {
+        --gradient-bg: linear-gradient(180deg, var(--white) 0%, var(--background-color) 100%);
+    }
+    
+    .nav-bar {
+        background: linear-gradient(180deg, 
+            rgba(255, 255, 255, 0.95) 0%, 
+            rgba(255, 248, 243, 0.95) 100%
+        );
+    }
+
+    .hero-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .hero-text h1 {
+        font-size: 2.8rem;
+    }
+
+    .hero-text p {
+        font-size: 1.2rem;
+    }
+
+    .hero-image {
+        justify-content: center;
+        margin-top: 30px;
+    }
+
+    .hero-image img {
+        width: 100%;
+        transform: none;
+    }
+
+    .cta-button {
+        padding: 15px 35px;
+        font-size: 1rem;
+    }
+
+    .credentials {
+        grid-template-columns: 1fr;
+    }
+
+    .curve-divider {
+        margin-top: -50px;
+    }
+
+    .curve-divider svg {
+        height: 100px;
+    }
+
+    .about {
+        padding: 100px 0 50px;
+    }
+
+    .mission-text {
+        font-size: 1rem;
+    }
+}
+
+/* Animação do botão na capa */
+.slide-in {
+    animation: slideIn 1s ease-out forwards;
+    opacity: 0;
+    transform: translateX(-100px);
+}
+
+@keyframes slideIn {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Estilização dos cards de planos */
+.plans-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 40px 20px;
+}
+
+.plan-card {
+    flex: 1;
+    max-width: 350px;
+    background: linear-gradient(135deg, white, #f8f8f8);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transform: translateY(50px);
+    opacity: 0;
+    animation: fadeUp 0.8s ease-out forwards;
+}
+
+.plan-card:nth-child(2) { animation-delay: 0.2s; }
+.plan-card:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.details-button {
+    background: linear-gradient(45deg, var(--primary-color), #7CCFD1);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.details-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(95, 180, 182, 0.3);
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 1000;
+}
+
+.modal-content {
+    position: relative;
+    background: white;
+    margin: 10% auto;
+    padding: 40px;
+    width: 90%;
+    max-width: 800px;
+    border-radius: 20px;
+    animation: modalFade 0.3s ease-out;
+}
+
+.modal-content h2 {
+    color: var(--primary-color);
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+}
+
+.modal-content p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.modal-cta-button {
+    display: inline-block;
+    background: linear-gradient(45deg, var(--primary-color), #7CCFD1);
+    color: white;
+    padding: 15px 30px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(95, 180, 182, 0.2);
+}
+
+.modal-cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(95, 180, 182, 0.3);
+}
+
+@keyframes modalFade {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.close-button {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    font-size: 28px;
+    cursor: pointer;
+    color: #666;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .plans-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .plan-card {
+        width: 100%;
+    }
+
+    .modal-content {
+        margin: 20% auto;
+        padding: 30px;
+    }
+
+    .modal-content h2 {
+        font-size: 1.8rem;
+    }
+
+    .modal-content p {
+        font-size: 1rem;
+    }
+}
+
+/* Título da seção de serviços */
+.plans h2 {
+    text-align: center;
+    font-size: 3.8rem;
+    line-height: 1.2;
+    margin-bottom: 50px;
+    font-weight: 700;
+    background: linear-gradient(90deg, var(--text-color) 0%, var(--primary-color) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Ajuste dos cards de planos */
+.plan-features {
+    list-style: none;
+    padding: 0;
+    margin: 30px 0;
+    text-align: left;
+    flex-grow: 1;
+}
+
+.plan-features li {
+    padding: 10px 0;
+    color: #666;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.plan-features li:last-child {
+    border-bottom: none;
+}
+
+/* Ajuste do texto highlight na seção sobre */
+.highlight {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+/* Remover menções a valores */
+.plan-features li:contains("R$") {
+    display: none;
+}
+
+/* Estilo do texto adicional */
+.additional-info {
+    max-width: 800px;
+    margin: 60px auto 0;
+    text-align: center;
+}
+
+.info-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #666;
+    padding: 0 20px;
+}
+
+/* Remover seções */
+.experience, .methodology {
+    display: none;
+}
+
+/* Estilo para o badge de desconto */
+.discount-badge {
+    background: var(--secondary-color);
+    color: white;
+    padding: 5px 15px;
+    border-radius: 15px;
+    font-size: 0.9rem;
+    margin-top: 10px;
+    display: inline-block;
+}
+
+/* Título da seção de contato alinhado com os demais */
+.contact h2 {
+    text-align: center;
+    font-size: 3.8rem;
+    line-height: 1.2;
+    margin-bottom: 50px;
+    font-weight: 700;
+    background: linear-gradient(90deg, var(--text-color) 0%, var(--primary-color) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Animações de fade para elementos ao rolar */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Ajuste do timing das animações */
+.contact-item {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.5s ease-out;
+}
+
+.contact-item.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.contact-item:nth-child(1) { transition-delay: 0.1s; }
+.contact-item:nth-child(2) { transition-delay: 0.2s; }
+.contact-item:nth-child(3) { transition-delay: 0.3s; }
+.contact-item:nth-child(4) { transition-delay: 0.4s; }
+
+.plan-card {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.5s ease-out;
+}
+
+.plan-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.plan-card:nth-child(1) { transition-delay: 0.1s; }
+.plan-card:nth-child(2) { transition-delay: 0.2s; }
+.plan-card:nth-child(3) { transition-delay: 0.3s; }
+
+/* Ajuste dos divisores curvos */
+.section-divider {
+    position: relative;
+    width: 100%;
+    height: 150px;
+    margin-top: -75px;
+    margin-bottom: -75px;
+    z-index: 2; /* Reduzido para não sobrepor o conteúdo */
+}
+
+/* Ajuste das cores dos divisores para combinar com as seções */
+.section-divider.to-light {
+    fill: var(--light-bg);
+}
+
+.section-divider.to-white {
+    fill: var(--white);
+}
+
+/* Ajuste das seções para acomodar os divisores */
+.about, .plans, .contact, .contact-form {
+    position: relative;
+    z-index: 3; /* Aumentado para ficar acima dos divisores */
+    padding-top: 100px; /* Aumentado para compensar o divisor */
+}
+
+/* Ajuste específico para a seção de contato */
+.contact {
+    padding-top: 120px; /* Mais espaço no topo */
+    margin-top: -50px; /* Ajuste para compensar o divisor */
+}
+
+.contact h2 {
+    position: relative;
+    z-index: 5; /* Garantir que o título fique visível */
+}
+
+/* Remover divisores específicos */
+.section-divider.plans-top,
+.section-divider.plans-bottom {
+    display: none;
+}
+
+/* Chat Bot Flutuante */
+.chat-bot-button {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 70px;
+    height: 70px;
+    background: white;
+    border-radius: 50%;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+}
+
+.chat-bot-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+.chat-bot-button img {
+    width: 45px;
+    height: 45px;
+    transition: transform 0.3s ease;
+    object-fit: contain;
+}
+
+.chat-bot-button:hover img {
+    transform: rotate(-10deg);
+}
+
+.chat-container {
+    position: fixed;
+    bottom: 100px;
+    right: 30px;
+    width: 350px;
+    height: 500px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.15);
+    z-index: 999;
+    display: none;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.chat-header {
+    background: linear-gradient(45deg, var(--primary-color), #7CCFD1);
+    padding: 20px;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.chat-header img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+}
+
+.chat-header h3 {
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+.chat-messages {
+    flex-grow: 1;
+    padding: 20px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.message {
+    max-width: 80%;
+    padding: 12px 15px;
+    border-radius: 15px;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+.bot-message {
+    background: #f0f0f0;
+    align-self: flex-start;
+    border-bottom-left-radius: 5px;
+}
+
+.user-message {
+    background: var(--primary-color);
+    color: white;
+    align-self: flex-end;
+    border-bottom-right-radius: 5px;
+}
+
+.chat-input {
+    padding: 15px;
+    border-top: 1px solid #eee;
+    display: flex;
+    gap: 10px;
+}
+
+.chat-input input {
+    flex-grow: 1;
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 25px;
+    font-size: 0.9rem;
+}
+
+.chat-input button {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.chat-input button:hover {
+    background: #7CCFD1;
+}
+
+.chat-container.active {
+    display: flex;
+}
+
+/* Animação de entrada do chat */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.chat-container.active {
+    display: flex;
+    animation: slideIn 0.3s ease-out;
+}
+
+/* Estilo para o tooltip personalizado */
+.faq-button {
+    position: relative;
+}
+
+.faq-button::before {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 100%;
+    right: 50%;
+    transform: translateX(50%);
+    padding: 8px 12px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    border-radius: 6px;
+    font-size: 14px;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+    margin-bottom: 10px;
+}
+
+.faq-button:hover::before {
+    opacity: 1;
+    visibility: visible;
+} 

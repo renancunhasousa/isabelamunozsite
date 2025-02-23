@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Isabela Muñoz - Nutricionista</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="nav-bar">
+        <div class="left-nav">
+            <div class="logo-container">
+                <img src="assets/images/LOGOPALETA.png" alt="Logo Isabela Muñoz">
+                <span class="brand-name">Instituto de Nutrição IM</span>
+            </div>
+            <span class="separator">|</span>
+            <ul class="nav-links">
+                <li><a href="#inicio">HOME</a></li>
+                <li><a href="#sobre">SOBRE</a></li>
+                <li><a href="#planos">SERVIÇOS</a></li>
+                <li><a href="#contato">CONTATO</a></li>
+            </ul>
+            <span class="separator">|</span>
+            <div class="social-icons">
+                <a href="https://instagram.com/nutri.isabelamunoz" target="_blank" class="social-icon">
+                    <img src="assets/images/LogoInsta.png" alt="Instagram">
+                </a>
+                <a href="https://www.doctoralia.com.br/isabela-munoz/nutricionista/campinas" target="_blank" class="social-icon">
+                    <img src="assets/images/LogoDoc.png" alt="Doctoralia">
+                </a>
+                <a href="https://wa.me/5519983321302" class="whatsapp-button">
+                    <i class="fab fa-whatsapp"></i>
+                    Agende sua consulta
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Transforme sua relação<br>com a alimentação</h1>
+                <p>Nutrição personalizada para uma vida mais saudável</p>
+                <a href="#planos" class="cta-button slide-in">Conheça nossos planos</a>
+            </div>
+            <div class="hero-image">
+                <img src="assets/images/capa.png" alt="Isabela Muñoz">
+            </div>
+        </div>
+    </section>
+
+    <svg class="section-divider to-white" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"></path>
+    </svg>
+
+    <section id="sobre" class="about">
+        <div class="about-grid">
+            <div class="about-image-wrapper">
+                <div class="shape-wrapper">
+                    <img src="assets/images/isa.png" alt="Isabela Muñoz" class="about-img">
+                </div>
+            </div>
+            <div class="about-content">
+                <h2>Olá, eu sou a Isabela!</h2>
+                <p class="highlight">Nutricionista apaixonada por transformar vidas através da alimentação consciente.</p>
+                <p class="mission-text">Meu trabalho vai além de criar planos alimentares; desenvolvo estratégias personalizadas que se encaixam no seu estilo de vida, considerando suas metas, desafios e preferências. Seja você um atleta em busca de performance, alguém que deseja perder gordura e/ou ganhar massa muscular, ou que quer melhorar a saúde de forma sustentável, você achou a pessoa certa para guiar o seu caminho. Meu próposito é simplificar o processo e motivá-lo a atingir resultados reais e duradouros, sempre com empatia, ciência e prática aliadas. Vamos juntos transformar a sua relação com a alimentação e desbloquear todo o potencial que existe em você!</p>
+                <div class="credentials">
+                    <div class="credential-item">
+                        <span class="number">2500+</span>
+                        <span class="text">Vidas transformadas</span>
+                    </div>
+                    <div class="credential-item">
+                        <span class="number">8</span>
+                        <span class="text">Países atendidos</span>
+                    </div>
+                    <div class="credential-item">
+                        <span class="number">10+</span>
+                        <span class="text">Certificações</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="planos" class="plans">
+        <div class="background-image"></div>
+        <h2>Conheça nossos serviços</h2>
+        <div class="plans-grid">
+            <div class="plan-card">
+                <div class="plan-header">
+                    <h3>NutriFast</h3>
+                    <p class="description">Consulta única</p>
+                </div>
+                <ul class="plan-features">
+                    <li>Atendimento 60 a 90 min</li>
+                    <li>Avaliação corporal</li>
+                    <li>1 plano alimentar personalizado</li>
+                    <li>4 opções por refeição</li>
+                    <li>Suplementação e pedido de exame</li>
+                </ul>
+                <button class="details-button" onclick="openModal('fast')">Mais detalhes</button>
+            </div>
+            <div class="plan-card">
+                <div class="plan-header">
+                    <h3>NutriSinergy</h3>
+                    <p class="description">2 consultas</p>
+                    <span class="discount-badge">10% de desconto nas consultas</span>
+                </div>
+                <ul class="plan-features">
+                    <li>Atendimento 60 a 90 min</li>
+                    <li>Avaliação corporal</li>
+                    <li>1 plano alimentar com até 4 opções por refeição</li>
+                    <li>Suplementação e pedido de exame</li>
+                    <li>Suporte via whatsapp durante o período contratado</li>
+                </ul>
+                <button class="details-button" onclick="openModal('sinergy')">Mais detalhes</button>
+            </div>
+            <div class="plan-card">
+                <div class="plan-header">
+                    <h3>NutriTransform</h3>
+                    <p class="description">3 consultas</p>
+                    <span class="discount-badge">15% de desconto nas consultas</span>
+                </div>
+                <ul class="plan-features">
+                    <li>Atendimento 60 a 90 min</li>
+                    <li>Avaliação corporal</li>
+                    <li>1 plano alimentar com até 4 opções por refeição</li>
+                    <li>Suplementação e pedido de exame</li>
+                    <li>Suporte via whatsapp durante o período contratado</li>
+                </ul>
+                <button class="details-button" onclick="openModal('transform')">Mais detalhes</button>
+            </div>
+        </div>
+        
+        <div class="additional-info">
+            <p class="info-text">Caso paciente precise ou deseje de planos alimentares adicionais ou mais opções de refeições por plano, além das incluídas na consulta, será cobrado o valor adicional por cada um.</p>
+        </div>
+    </section>
+
+    <section id="contato" class="contact">
+        <h2>Entre em Contato</h2>
+        <div class="contact-info">
+            <div class="contact-grid">
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <h3>Ligue para nós</h3>
+                    <p>(19) 98332-1302</p>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-comment"></i>
+                    <h3>Mande uma mensagem</h3>
+                    <p>(19) 98332-1302</p>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <h3>Envie um e-mail</h3>
+                    <p>isabelamunoznutri@hotmail.com</p>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3>Venha nos visitar</h3>
+                    <p>Rua Barão de Jaguara, 655, Sala 1701<br>Campinas - São Paulo</p>
+                </div>
+            </div>
+
+            <div class="map-container">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3675.356219020248!2d-47.06378788503453!3d-22.906399785015155!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c8c8f6a9554c91%3A0x16b5b1c058ca6b70!2sR.%20Bar%C3%A3o%20de%20Jaguara%2C%20655%20-%20Centro%2C%20Campinas%20-%20SP%2C%2013015-001!5e0!3m2!1spt-BR!2sbr!4v1647887642324!5m2!1spt-BR!2sbr"
+                    width="100%"
+                    height="450"
+                    style="border:0;"
+                    allowfullscreen=""
+                    loading="lazy">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <section id="form" class="contact-form">
+        <h2>Preencha o Formulário Abaixo</h2>
+        <p class="subtitle">Com suas dúvidas e perguntas</p>
+        
+        <form action="mailto:isabelamunoznutri@hotmail.com" method="POST" enctype="text/plain">
+            <div class="form-group">
+                <input type="text" name="name" placeholder="Nome" required>
+            </div>
+            <div class="form-group">
+                <input type="email" name="email" placeholder="E-mail" required>
+            </div>
+            <div class="form-group">
+                <input type="tel" name="phone" placeholder="Telefone" required>
+            </div>
+            <div class="form-group">
+                <textarea name="message" placeholder="Mensagem" required></textarea>
+            </div>
+            <button type="submit" class="submit-button">Enviar</button>
+        </form>
+    </section>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2 id="modal-title"></h2>
+            <p id="modal-text"></p>
+            <a href="https://wa.me/5519983321302" class="modal-cta-button">Agende sua consulta no WhatsApp</a>
+        </div>
+    </div>
+
+    <!-- Chat Bot -->
+    <button class="chat-bot-button" id="chatButton">
+        <img src="assets/images/mascote.png" alt="Chat Bot Mascote">
+    </button>
+
+    <div class="chat-container" id="chatContainer">
+        <div class="chat-header">
+            <img src="assets/images/mascote.png" alt="Chat Bot Mascote">
+            <h3>Assistente Nutricional</h3>
+        </div>
+        <div class="chat-messages" id="chatMessages">
+            <div class="message bot-message">
+                Olá! Eu sou o assistente nutricional da Isabela. Como posso ajudar você hoje?
+            </div>
+        </div>
+        <div class="chat-input">
+            <input type="text" id="chatInput" placeholder="Digite sua mensagem...">
+            <button onclick="sendMessage()">Enviar</button>
+        </div>
+    </div>
+
+    <script src="chat.js"></script>
+    <script>
+    const planDetails = {
+        'fast': {
+            title: 'NutriFast',
+            text: `NutriFast, é nosso plano de 1 consulta, ele é ideal para quem precisa de um acompanhamento sazonal ou pontual. Se você quer conhecer nossos serviços, receber orientação especializada por uma consulta única ou precisa de apoio imediato para alcançar seus objetivos, o NutriFast é a solução perfeita! Em uma única consulta, você vai contar com toda a dedicação e atenção necessária para entender suas necessidades e traçar um plano alimentar que se encaixe perfeitamente ao seu momento. Nosso objetivo é ajudá-lo a atingir suas metas de forma prática e eficiente, com a mesma qualidade de um acompanhamento contínuo. Agende sua consulta no WhatsApp e começe sua jornada de resultados!`
+        },
+        'sinergy': {
+            title: 'NutriSinergy',
+            text: `O NutriSynergy é o plano perfeito para quem quer entender melhor uma alimentação equilibrada e adotar hábitos saudáveis de forma eficaz. Com 2 consultas, você terá acompanhamento próximo para ajustar sua alimentação, monitorar a evolução e garantir que está no caminho certo para alcançar seus objetivos. Este plano foi pensado para quem precisa de apoio contínuo, garantindo que seus esforços se traduzam em resultados reais e sustentáveis, mesmo na rotina diária. Agende sua consulta no WhatsApp e começe sua jornada de resultados!`
+        },
+        'transform': {
+            title: 'NutriTransform',
+            text: `O NutriTransform é o nosso plano mais completo, com 3 consultas, pensado para aqueles que estão prontos para se dedicar de verdade à mudança de seus hábitos alimentares e alcançar resultados duradouros. Se você precisa de apoio contínuo e personalizado para transformar sua rotina, esse plano é para você! Com acompanhamento mais próximo, vamos ajustar sua alimentação de forma estratégica, ajudá-lo a se comprometer com suas metas e garantir que cada passo leve você para mais perto da transformação que deseja. Este é o plano ideal para quem está disposto a investir tempo e dedicação em sua saúde, buscando não apenas mudanças momentâneas, mas uma verdadeira revolução nos seus hábitos alimentares e na sua qualidade de vida. Agende sua consulta no WhatsApp e começe sua jornada de resultados!`
+        }
+    };
+
+    function openModal(planType) {
+        const modal = document.getElementById('modal');
+        const modalTitle = document.getElementById('modal-title');
+        const modalText = document.getElementById('modal-text');
+        
+        modal.style.display = "block";
+        modalTitle.textContent = planDetails[planType].title;
+        modalText.textContent = planDetails[planType].text;
+    }
+
+    document.querySelector('.close-button').onclick = function() {
+        document.getElementById('modal').style.display = "none";
+    }
+
+    window.onclick = function(event) {
+        const modal = document.getElementById('modal');
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+
+    // Adicionar observador de interseção para animações
+    const observerOptions = {
+        threshold: 0.2,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, observerOptions);
+
+    // Observar elementos que devem animar
+    document.querySelectorAll('.plan-card, .contact-item, .shape-wrapper').forEach(el => {
+        el.classList.add('fade-in');
+        observer.observe(el);
+    });
+    </script>
+</body>
+</html> 
