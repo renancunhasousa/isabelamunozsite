@@ -29,7 +29,7 @@ function addMessage(message, sender) {
 async function callChatGPT(message) {
     try {
         console.log('Enviando mensagem:', message);
-        const response = await fetch('http://localhost:3000/api/chat', {
+        const response = await fetch('https://api-vercel-isa.vercel.app/api/chat', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -54,7 +54,7 @@ async function callChatGPT(message) {
         return data.response;
     } catch (error) {
         console.error('Erro detalhado ao chamar a API:', error);
-        return "Desculpe, ocorreu um erro ao processar sua mensagem. Por favor, verifique se o servidor está rodando e tente novamente.";
+        return "Desculpe, ocorreu um erro ao processar sua mensagem. Por favor, tente novamente.";
     }
 }
 
