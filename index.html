@@ -3,10 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#5FB4B6">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
     <title>Isabela Muñoz - Nutricionista</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-93Q3JTVWJD"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-93Q3JTVWJD');
+    </script>
 </head>
 <body>
     <nav class="nav-bar">
@@ -37,6 +50,13 @@
             </div>
         </div>
     </nav>
+
+    <a href="https://wa.me/5519983321302" 
+       class="whatsapp-float" 
+       aria-label="Agendar consulta pelo WhatsApp"
+       style="display: none;">
+        <i class="fab fa-whatsapp"></i>
+    </a>
 
     <section id="inicio" class="hero">
         <div class="hero-content">
@@ -106,7 +126,7 @@
                 <div class="plan-header">
                     <h3>NutriSinergy</h3>
                     <p class="description">2 consultas</p>
-                    <span class="discount-badge">10% de desconto nas consultas</span>
+                    <span class="discount-badge">Desconto progressivo</span>
                 </div>
                 <ul class="plan-features">
                     <li>Atendimento 60 a 90 min</li>
@@ -121,7 +141,7 @@
                 <div class="plan-header">
                     <h3>NutriTransform</h3>
                     <p class="description">3 consultas</p>
-                    <span class="discount-badge">15% de desconto nas consultas</span>
+                    <span class="discount-badge">Desconto progressivo</span>
                 </div>
                 <ul class="plan-features">
                     <li>Atendimento 60 a 90 min</li>
@@ -209,7 +229,9 @@
     </div>
 
     <!-- Chat Bot -->
-    <button class="chat-bot-button" id="chatButton">
+    <button class="chat-bot-button" 
+            id="chatButton" 
+            aria-label="Abrir chat com assistente nutricional">
         <img src="assets/images/mascote.png" alt="Chat Bot Mascote">
     </button>
 
@@ -285,6 +307,22 @@
     document.querySelectorAll('.plan-card, .contact-item, .shape-wrapper').forEach(el => {
         el.classList.add('fade-in');
         observer.observe(el);
+    });
+
+    // Adicione este script para mostrar/ocultar o botão flutuante em mobile
+    document.addEventListener('DOMContentLoaded', function() {
+        const whatsappFloat = document.querySelector('.whatsapp-float');
+        
+        function toggleWhatsappButton() {
+            if (window.innerWidth <= 768) {
+                whatsappFloat.style.display = 'block';
+            } else {
+                whatsappFloat.style.display = 'none';
+            }
+        }
+        
+        window.addEventListener('resize', toggleWhatsappButton);
+        toggleWhatsappButton(); // Executa ao carregar
     });
     </script>
 </body>
