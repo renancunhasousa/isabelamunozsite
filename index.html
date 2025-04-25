@@ -16,25 +16,31 @@
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
 
+        // Handle script loading errors
+        var gtagScript = document.querySelector('script[src*="googletagmanager.com/gtag/js"]');
+        gtagScript.onerror = function() {
+            console.error('Failed to load Google Analytics script');
+        };
+
+        gtag('js', new Date());
         gtag('config', 'G-93Q3JTVWJD', {
-            'debug_mode': true,
             'send_page_view': true
         });
 
-        // Verify GA loading
+        // Enhanced verification of GA loading
         window.addEventListener('load', function() {
-            if (typeof gtag === 'function') {
-                console.log('Google Analytics loaded successfully');
-                // Test event
-                gtag('event', 'page_view', {
-                    'page_title': document.title,
-                    'page_location': window.location.href
-                });
-            } else {
-                console.error('Google Analytics failed to load');
-            }
+            setTimeout(function() {
+                if (typeof gtag === 'function' && window.google_tag_manager) {
+                    console.log('Google Analytics loaded and initialized successfully');
+                    gtag('event', 'page_view', {
+                        'page_title': document.title,
+                        'page_location': window.location.href
+                    });
+                } else {
+                    console.error('Google Analytics not initialized properly');
+                }
+            }, 2000); // Give GA time to initialize
         });
     </script>
 </head>
@@ -269,6 +275,7 @@
     </div>
 
     <script src="chat.js"></script>
+    <script async src="/_vercel/speed-insights/script.js"></script>
     <script>
     const planDetails = {
         'fast': {
