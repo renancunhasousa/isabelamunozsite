@@ -18,7 +18,24 @@
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
 
-        gtag('config', 'G-93Q3JTVWJD');
+        gtag('config', 'G-93Q3JTVWJD', {
+            'debug_mode': true,
+            'send_page_view': true
+        });
+
+        // Verify GA loading
+        window.addEventListener('load', function() {
+            if (typeof gtag === 'function') {
+                console.log('Google Analytics loaded successfully');
+                // Test event
+                gtag('event', 'page_view', {
+                    'page_title': document.title,
+                    'page_location': window.location.href
+                });
+            } else {
+                console.error('Google Analytics failed to load');
+            }
+        });
     </script>
 </head>
 <body>
@@ -326,4 +343,4 @@
     });
     </script>
 </body>
-</html> 
+</html>

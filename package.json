@@ -1,19 +1,17 @@
 {
-  "name": "teste",
+  "name": "isabelamunoznutri",
   "version": "1.0.0",
-  "main": "chat.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "vercel-build": "echo 'Build step completed'",
+    "start": "node api/chat.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
-    "dotenv": "^16.4.7",
-    "express": "^4.21.2",
-    "openai": "^4.85.4"
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "openai": "^4.0.0"
   },
-  "description": ""
+  "engines": {
+    "node": ">=14.0.0"
+  }
 }

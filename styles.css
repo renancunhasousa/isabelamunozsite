@@ -9,6 +9,77 @@
     --section-spacing: 120px;
 }
 
+@media (prefers-color-scheme: dark) {
+    :root {
+        --primary-color: #7CCFD1;
+        --secondary-color: #F5B565;
+        --text-color: #E1E1E1;
+        --background-color: #1A1A1A;
+        --white: #242424;
+        --gradient-bg: linear-gradient(90deg, #242424 0%, #1A1A1A 100%);
+        --light-bg: #242424;
+    }
+
+    /* Ajustes específicos para modo escuro */
+    .nav-bar {
+        background: #242424;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .nav-links a {
+        color: var(--text-color);
+    }
+
+    .plan-card {
+        background: linear-gradient(135deg, #2A2A2A, #242424);
+    }
+
+    .contact-item {
+        background: #2A2A2A;
+    }
+
+    .modal-content {
+        background: #242424;
+        color: var(--text-color);
+    }
+
+    .chat-container {
+        background: #242424;
+    }
+
+    .chat-header {
+        background: linear-gradient(45deg, var(--primary-color), #7CCFD1);
+    }
+
+    .bot-message {
+        background: #2A2A2A;
+        color: var(--text-color);
+    }
+
+    .chat-input input {
+        background: #2A2A2A;
+        color: var(--text-color);
+        border: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .chat-input input::placeholder {
+        color: rgba(255,255,255,0.5);
+    }
+
+    /* Ajuste do formulário para modo escuro */
+    .form-group input,
+    .form-group textarea {
+        background: #2A2A2A;
+        color: var(--text-color);
+        border: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .form-group input::placeholder,
+    .form-group textarea::placeholder {
+        color: rgba(255,255,255,0.5);
+    }
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -27,7 +98,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 15px 40px;
+    padding: 10px 20px;
     background: white;
     box-shadow: 0 2px 10px rgba(0,0,0,0.05);
     position: fixed;
@@ -39,8 +110,8 @@ body {
 .left-nav {
     display: flex;
     align-items: center;
-    gap: 30px;
-    max-width: 1200px;
+    gap: 15px;
+    max-width: 100%;
     width: 100%;
     margin: 0 auto;
 }
@@ -70,9 +141,9 @@ body {
 
 .nav-links {
     display: flex;
-    gap: 40px;
+    gap: 20px;
     list-style: none;
-    margin: 0 40px;
+    margin: 0 10px;
 }
 
 .nav-links a {
@@ -86,7 +157,7 @@ body {
 .social-icons {
     display: flex;
     align-items: center;
-    gap: 25px;
+    gap: 15px;
     margin-left: auto;
 }
 
@@ -103,10 +174,10 @@ body {
 .whatsapp-button {
     background: #25D366;
     color: white;
-    padding: 8px 20px;
+    padding: 6px 12px;
     border-radius: 25px;
     text-decoration: none;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     display: flex;
     align-items: center;
     gap: 8px;
@@ -117,6 +188,10 @@ body {
 .whatsapp-button:hover {
     transform: translateY(-2px);
     box-shadow: 0 4px 15px rgba(37, 211, 102, 0.2);
+}
+
+.whatsapp-button i {
+    font-size: 0.9rem;
 }
 
 /* Seção de contato atualizada */
@@ -261,16 +336,16 @@ form {
     }
 
     .nav-links {
-        gap: 30px;
-        margin: 0 20px;
+        gap: 15px;
+        margin: 0 10px;
+    }
+
+    .brand-name {
+        display: none;
     }
 }
 
 @media (max-width: 992px) {
-    .brand-name {
-        display: none;
-    }
-
     .nav-links {
         gap: 20px;
     }
@@ -453,26 +528,24 @@ form {
     z-index: 2;
 }
 
-.plan-card {
-    background: linear-gradient(135deg, 
-        var(--white) 0%, 
-        rgba(255, 248, 243, 0.5) 100%
-    );
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(10px);
-    border-radius: 20px;
-    padding: 40px;
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+.plan-features {
+    list-style: none;
+    padding: 0;
+    margin: 30px 0;
+    text-align: left;
+    flex-grow: 1;
+    min-height: 200px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    min-height: 450px; /* Altura mínima para alinhar os botões */
+    justify-content: flex-start;
 }
 
 .plan-header {
     margin-bottom: 30px;
+    min-height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 
 .plan-header h3 {
@@ -658,6 +731,27 @@ form {
     .mission-text {
         font-size: 1rem;
     }
+
+    .whatsapp-button {
+        display: none;
+    }
+
+    .whatsapp-float {
+        text-decoration: none;
+        display: flex !important;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        bottom: 90px;
+        right: 20px;
+        background: #25D366;
+        color: white;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+        z-index: 999;
+    }
 }
 
 /* Animação do botão na capa */
@@ -692,6 +786,10 @@ form {
     transform: translateY(50px);
     opacity: 0;
     animation: fadeUp 0.8s ease-out forwards;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 500px;
 }
 
 .plan-card:nth-child(2) { animation-delay: 0.2s; }
@@ -831,14 +929,6 @@ form {
 }
 
 /* Ajuste dos cards de planos */
-.plan-features {
-    list-style: none;
-    padding: 0;
-    margin: 30px 0;
-    text-align: left;
-    flex-grow: 1;
-}
-
 .plan-features li {
     padding: 10px 0;
     color: #666;
@@ -955,7 +1045,7 @@ form {
     height: 150px;
     margin-top: -75px;
     margin-bottom: -75px;
-    z-index: 2; /* Reduzido para não sobrepor o conteúdo */
+    z-index: 2;
 }
 
 /* Ajuste das cores dos divisores para combinar com as seções */
@@ -970,19 +1060,19 @@ form {
 /* Ajuste das seções para acomodar os divisores */
 .about, .plans, .contact, .contact-form {
     position: relative;
-    z-index: 3; /* Aumentado para ficar acima dos divisores */
-    padding-top: 100px; /* Aumentado para compensar o divisor */
+    z-index: 3;
+    padding-top: 100px;
 }
 
 /* Ajuste específico para a seção de contato */
 .contact {
-    padding-top: 120px; /* Mais espaço no topo */
-    margin-top: -50px; /* Ajuste para compensar o divisor */
+    padding-top: 120px;
+    margin-top: -50px;
 }
 
 .contact h2 {
     position: relative;
-    z-index: 5; /* Garantir que o título fique visível */
+    z-index: 5;
 }
 
 /* Remover divisores específicos */
@@ -995,9 +1085,9 @@ form {
 .chat-bot-button {
     position: fixed;
     bottom: 30px;
-    right: 30px;
-    width: 70px;
-    height: 70px;
+    right: 80px;
+    width: 90px;
+    height: 90px;
     background: white;
     border-radius: 50%;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
@@ -1005,6 +1095,7 @@ form {
     transition: all 0.3s ease;
     z-index: 1000;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     border: none;
@@ -1016,20 +1107,47 @@ form {
 }
 
 .chat-bot-button img {
-    width: 45px;
-    height: 45px;
+    width: 55px;
+    height: 55px;
     transition: transform 0.3s ease;
     object-fit: contain;
+    margin-bottom: 5px;
 }
 
 .chat-bot-button:hover img {
     transform: rotate(-10deg);
 }
 
+.chat-bot-button::after {
+    content: 'Tire suas dúvidas aqui';
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--primary-color);
+    color: white;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.chat-bot-button::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 8px solid var(--primary-color);
+}
+
 .chat-container {
     position: fixed;
     bottom: 100px;
-    right: 30px;
+    right: 80px;
     width: 350px;
     height: 500px;
     background: white;
@@ -1167,4 +1285,267 @@ form {
 .faq-button:hover::before {
     opacity: 1;
     visibility: visible;
+}
+
+/* Modificar o comportamento do tooltip quando o chat estiver aberto */
+.chat-bot-button.chat-open::after,
+.chat-bot-button.chat-open::before {
+    display: none;
+}
+
+/* Ajustes responsivos para smartphones */
+@media (max-width: 768px) {
+    /* Navegação */
+    .nav-bar {
+        padding: 10px;
+    }
+
+    .nav-links, .social-icons {
+        display: none;
+    }
+
+    .separator {
+        display: none;
+    }
+
+    .logo-container {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .logo-container img {
+        height: 30px;
+    }
+
+    /* Hero Section */
+    .hero {
+        padding-top: 80px;
+        min-height: auto;
+    }
+
+    .hero-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .hero-text h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero-text p {
+        font-size: 1rem;
+    }
+
+    .hero-image img {
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    /* Sobre */
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding: 20px;
+    }
+
+    .shape-wrapper {
+        padding-bottom: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    .credentials {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    /* Planos */
+    .plans {
+        padding: 50px 0;
+    }
+
+    .plans h2 {
+        font-size: 2.2rem;
+        padding: 0 20px;
+    }
+
+    .plans-grid {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .plan-card {
+        max-width: 100%;
+        min-height: auto;
+    }
+
+    /* Contato */
+    .contact h2 {
+        font-size: 2.2rem;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 0 20px;
+    }
+
+    .map-container {
+        margin: 20px;
+    }
+
+    /* Formulário de contato */
+    .contact-form {
+        padding: 50px 20px;
+    }
+
+    .contact-form h2 {
+        font-size: 2.2rem;
+    }
+
+    /* Modal */
+    .modal-content {
+        width: 95%;
+        margin: 5% auto;
+        padding: 20px;
+    }
+
+    .modal-content h2 {
+        font-size: 1.8rem;
+    }
+
+    /* Chat Bot */
+    .chat-bot-button,
+    .whatsapp-float {
+        width: 60px;
+        height: 60px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+
+    .chat-bot-button {
+        bottom: 20px;
+        right: 20px;
+    }
+
+    .whatsapp-float {
+        bottom: 90px;
+        right: 20px;
+        display: flex !important;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .chat-bot-button img {
+        width: 35px;
+        height: 35px;
+    }
+
+    .whatsapp-float i {
+        font-size: 30px;
+    }
+
+    .chat-container {
+        bottom: 90px;
+        right: 10px;
+        width: calc(100% - 20px);
+        height: 60vh;
+    }
+
+    .chat-bot-button::after {
+        display: none;
+    }
+
+    .chat-bot-button::before {
+        display: none;
+    }
+
+    /* Ajustes gerais de texto */
+    .highlight {
+        font-size: 1rem;
+    }
+
+    .mission-text {
+        font-size: 0.9rem;
+    }
+
+    /* Ajuste dos botões */
+    .cta-button, 
+    .details-button, 
+    .submit-button {
+        padding: 12px 25px;
+        font-size: 0.9rem;
+    }
+}
+
+/* Ajustes para telas muito pequenas */
+@media (max-width: 360px) {
+    .hero-text h1 {
+        font-size: 1.8rem;
+    }
+
+    .plans h2,
+    .contact h2,
+    .contact-form h2 {
+        font-size: 1.8rem;
+    }
+
+    .chat-container {
+        height: 70vh;
+    }
+}
+
+/* Ajuste para orientação paisagem em smartphones */
+@media (max-height: 500px) and (orientation: landscape) {
+    .hero {
+        min-height: auto;
+        padding: 100px 0 50px;
+    }
+
+    .chat-container {
+        height: 80vh;
+    }
+}
+
+/* Ajuste para telas muito pequenas */
+@media (max-width: 360px) {
+    .chat-bot-button,
+    .whatsapp-float {
+        width: 50px;
+        height: 50px;
+    }
+
+    .chat-bot-button {
+        bottom: 20px;
+    }
+
+    .whatsapp-float {
+        bottom: 80px;
+    }
+
+    .chat-bot-button img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .whatsapp-float i {
+        font-size: 25px;
+    }
+}
+
+/* Ajuste para orientação paisagem */
+@media (max-height: 500px) and (orientation: landscape) {
+    .chat-bot-button {
+        bottom: 10px;
+    }
+
+    .whatsapp-float {
+        bottom: 80px;
+    }
+
+    .chat-container {
+        bottom: 70px;
+    }
 } 
