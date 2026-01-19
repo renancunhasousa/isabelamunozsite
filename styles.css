@@ -1035,11 +1035,7 @@ form {
         --gradient-bg: linear-gradient(180deg, var(--white) 0%, var(--background-color) 100%);
     }
 
-    .nav-bar {
-        background: linear-gradient(180deg,
-                rgba(255, 255, 255, 0.95) 0%,
-                rgba(255, 248, 243, 0.95) 100%);
-    }
+
 
     .hero-content {
         grid-template-columns: 1fr;
