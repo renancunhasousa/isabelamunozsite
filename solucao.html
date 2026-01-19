@@ -25,24 +25,28 @@
                     <img src="assets/images/logo_assinatura.png" alt="Logo Isabela Muñoz" class="logo-signature">
                 </div>
 
+                <button class="mobile-menu-btn" aria-label="Abrir Menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+
                 <ul class="nav-links">
                     <li><a href="index.html">Início</a></li>
                     <li><a href="solucao.html" class="active">Solução</a></li>
                     <li><a href="sobre.html">Sobre mim</a></li>
                     <li><a href="planos.html">Planos</a></li>
                     <li><a href="duvidas.html">Dúvidas</a></li>
-                    <li><a href="blog.html">Blog</a></li>
+
                     <li><a href="cupons.html">Cupons</a></li>
                     <li><a href="contato.html">Contato</a></li>
                 </ul>
 
                 <div class="social-icons">
                     <a href="https://instagram.com/nutri.isabelamunoz" target="_blank" class="social-icon"
-                        aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="https://wa.me/5519983321302" target="_blank" class="social-icon" aria-label="WhatsApp"><i
-                            class="fab fa-whatsapp"></i></a>
+                        aria-label="Siga no Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://wa.me/5519983321302" target="_blank" class="social-icon"
+                        aria-label="Contato WhatsApp"><i class="fab fa-whatsapp"></i></a>
                     <a href="https://www.doctoralia.com.br/isabela-munoz/nutricionista/campinas" target="_blank"
-                        class="social-icon" aria-label="Doctoralia"><i class="fas fa-user-md"></i></a>
+                        class="social-icon" aria-label="Página Doctoralia"><i class="fas fa-user-md"></i></a>
                 </div>
             </div>
         </nav>
@@ -50,10 +54,16 @@
 
     <main class="solution-page">
         <!-- Hero Section -->
-        <section class="solution-hero">
+        <section class="hero solution-hero-modifier">
             <div class="hero-content">
-                <h1>Nossas Soluções Nutricionais</h1>
-                <p>Escolha a trilha ideal para o seu objetivo</p>
+                <div class="hero-text">
+                    <h1>Nossas Soluções Nutricionais</h1>
+                    <p class="hero-description">Escolha a trilha ideal para o seu objetivo. Essas são as nossas áreas de
+                        especialidade.</p>
+                </div>
+                <div class="hero-image">
+                    <img src="assets/images/new_bkg1.png" alt="Soluções Nutricionais">
+                </div>
             </div>
         </section>
 
@@ -61,7 +71,7 @@
         <section class="tracks-section">
             <div class="tracks-container">
                 <!-- Trilha da Performance -->
-                <div class="track-card performance">
+                <div class="track-card performance fade-in">
                     <div class="track-header">
                         <i class="fas fa-bolt track-icon"></i>
                         <h2>Trilha da Performance</h2>
@@ -73,6 +83,7 @@
                             <p>Atletas e praticantes de atividade física que buscam hipertrofia, performance e superação
                                 de limites.</p>
                         </div>
+
 
                         <div class="track-block">
                             <h3>O que esperar da jornada?</h3>
@@ -100,7 +111,7 @@
                 </div>
 
                 <!-- Trilha da Vitalidade -->
-                <div class="track-card vitality">
+                <div class="track-card vitality fade-in">
                     <div class="track-header">
                         <i class="fas fa-heart track-icon"></i>
                         <h2>Trilha da Vitalidade</h2>
@@ -142,7 +153,7 @@
 
         <!-- Process Flow Section -->
         <section class="process-section">
-            <h2 class="process-title">Como será conduzido...</h2>
+            <h2 class="process-title">Como será conduzido os nossos atendimentos...</h2>
             <div class="process-timeline">
                 <div class="process-step">
                     <div class="step-dot"></div>
@@ -173,6 +184,11 @@
                     <p>Suporte motivacional e para dúvidas via aplicativo e whatsapp</p>
                 </div>
             </div>
+
+            <div class="process-actions">
+                <a href="https://wa.me/5519983321302" target="_blank" class="cta-button">Agendar Consulta</a>
+                <a href="planos.html" class="cta-button outline">Conhecer Planos</a>
+            </div>
         </section>
     </main>
 
@@ -197,7 +213,7 @@
                     <li><a href="sobre.html">Sobre mim</a></li>
                     <li><a href="planos.html">Planos</a></li>
                     <li><a href="duvidas.html">Dúvidas</a></li>
-                    <li><a href="blog.html">Blog</a></li>
+
                     <li><a href="cupons.html">Cupons</a></li>
                     <li><a href="contato.html">Contato</a></li>
                 </ul>
@@ -255,12 +271,39 @@
     <script src="chat.js"></script>
     <script>
         const header = document.getElementById('header');
+        const mobileBtn = document.querySelector('.mobile-menu-btn');
+        const navLinks = document.querySelector('.nav-links');
+
+        mobileBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            mobileBtn.querySelector('i').classList.toggle('fa-bars');
+            mobileBtn.querySelector('i').classList.toggle('fa-times');
+        });
+
         window.addEventListener('scroll', () => {
             if (window.scrollY > 50) {
                 header.classList.add('scrolled');
             } else {
                 header.classList.remove('scrolled');
             }
+        });
+
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
         });
     </script>
 </body>

@@ -4,14 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#5FB4B6">
+    <link rel="icon" type="image/png" href="assets/images/LOGOPALETA.png">
+    <title>Planos - Isabela Muñoz</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="lux_stats.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600&family=Arimo:wght@400;500;600;700&family=Allison&family=Amiri:wght@400;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <title>Página em Construção - Isabela Muñoz</title>
 </head>
 
 <body>
@@ -21,35 +24,242 @@
                 <div class="logo-container">
                     <img src="assets/images/logo_assinatura.png" alt="Logo Isabela Muñoz" class="logo-signature">
                 </div>
+
                 <ul class="nav-links">
                     <li><a href="index.html">Início</a></li>
                     <li><a href="solucao.html">Solução</a></li>
                     <li><a href="sobre.html">Sobre mim</a></li>
-                    <li><a href="planos.html">Planos</a></li>
+                    <li><a href="planos.html" class="active">Planos</a></li>
                     <li><a href="duvidas.html">Dúvidas</a></li>
-                    <li><a href="blog.html">Blog</a></li>
+
                     <li><a href="cupons.html">Cupons</a></li>
                     <li><a href="contato.html">Contato</a></li>
                 </ul>
+
                 <div class="social-icons">
-                    <a href="https://instagram.com/nutri.isabelamunoz" target="_blank" class="social-icon"><i
-                            class="fab fa-instagram"></i></a>
-                    <a href="https://wa.me/5519983321302" target="_blank" class="social-icon"><i
-                            class="fab fa-whatsapp"></i></a>
+                    <a href="https://instagram.com/nutri.isabelamunoz" target="_blank" class="social-icon"
+                        aria-label="Siga no Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://wa.me/5519983321302" target="_blank" class="social-icon"
+                        aria-label="Contato WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://www.doctoralia.com.br/isabela-munoz/nutricionista/campinas" target="_blank"
+                        class="social-icon" aria-label="Página Doctoralia"><i class="fas fa-user-md"></i></a>
                 </div>
             </div>
         </nav>
     </header>
 
-    <main style="padding-top: 150px; text-align: center; min-height: 80vh;">
-        <h1 style="font-size: 3rem; margin-bottom: 20px;">Página em Construção</h1>
-        <p style="font-size: 1.2rem; color: #666;">Estamos preparando um conteúdo incrível para esta seção. Volte em
-            breve!</p>
-        <a href="index.html" class="cta-button" style="margin-top: 40px; display: inline-block;">Voltar para o
-            Início</a>
+    <main style="padding-top: 100px;">
+        <section id="planos" class="plans">
+            <div class="background-image"></div>
+            <h2>Conheça nossas soluções</h2>
+            <div class="plans-grid">
+                <div class="plan-card">
+                    <div class="plan-header">
+                        <h3>Essence</h3>
+                    </div>
+                    <ul class="plan-features">
+                        <li><i class="far fa-check-circle check-empty"></i> Duas consultas presenciais</li>
+                        <li><i class="far fa-check-circle check-empty"></i> Um plano alimentar por consulta</li>
+                        <li><i class="far fa-check-circle check-empty"></i> Até 3 meses de acompanhamento</li>
+                        <li><i class="fas fa-check-circle check-filled"></i> Suporte via Whatsapp no período</li>
+                        <li><i class="fas fa-check-circle check-filled"></i> Duas Bioimpedâncias BÔNUS</li>
+                        <li><i class="fas fa-check-circle check-filled"></i> Desconto de pacote</li>
+                    </ul>
+                    <button class="details-button" onclick="openModal('fast')">Mais detalhes</button>
+                </div>
+                <div class="plan-card">
+                    <div class="plan-header">
+                        <h3>Premium</h3>
+                    </div>
+                    <ul class="plan-features">
+                        <li><i class="far fa-check-circle check-empty"></i> Três consultas presenciais</li>
+                        <li><i class="far fa-check-circle check-empty"></i> Um plano alimentar por consulta</li>
+                        <li><i class="fas fa-check-circle check-filled"></i> Até 5 meses de acompanhamento</li>
+                        <li><i class="fas fa-check-circle check-filled"></i> Suporte via Whatsapp no período</li>
+                        <li><i class="fas fa-check-circle check-filled"></i> Três Bioimpedâncias BÔNUS</li>
+                        <li><i class="fas fa-check-circle check-filled"></i> Desconto de pacote</li>
+                    </ul>
+                    <button class="details-button" onclick="openModal('sinergy')">Mais detalhes</button>
+                </div>
+                <div class="plan-card">
+                    <div class="plan-header">
+                        <h3>Legacy</h3>
+                    </div>
+                    <ul class="plan-features">
+                        <li><i class="fas fa-check-circle check-filled"></i> 5 consultas (3 presenciais, 2 online)</li>
+                        <li><i class="fas fa-check-circle check-filled"></i> Até 3 meses de acompanhamento</li>
+                        <li><i class="fas fa-check-circle check-filled"></i> Um plano alimentar por consulta</li>
+                        <li><i class="fas fa-check-circle check-filled"></i> Suporte via Whatsapp prioritário</li>
+                        <li><i class="fas fa-check-circle check-filled"></i> Três Bioimpedâncias BÔNUS</li>
+                        <li><i class="fas fa-check-circle check-filled"></i> Desconto de pacote</li>
+                        <li><i class="fas fa-check-circle check-filled"></i> Recebimento do Kit</li>
+                    </ul>
+                    <button class="details-button" onclick="openModal('transform')">Mais detalhes</button>
+                </div>
+            </div>
+
+            <div class="additional-info">
+                <p class="info-text">Para flexibilidade em seu acompanhamento oferecemos consultas avulsas individuais
+                    nas modalidades presencial ou online, adaptando-se à sua rotina. Para garantir a segurança na
+                    aplicação da sua nova estratégia, você conta com suporte exclusivo via WhatsApp por 7 dias após a
+                    consulta para tirar dúvidas. Nota: O exame de bioimpedância é um serviço opcional e pode ser
+                    contratado separadamente.</p>
+                <div style="text-align: center; margin-top: 40px;">
+                    <a href="https://wa.me/5519983321302" target="_blank" class="cta-button"
+                        style="display: inline-block;">Quero Agendar Agora</a>
+                </div>
+            </div>
+        </section>
     </main>
 
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-section main-info">
+                <img src="assets/images/logo_assinatura.png" alt="Isabela Muñoz" class="footer-logo">
+                <p class="methodology-text">Metodologia fundamentada na Certificação Internacional do American College
+                    of Sports Medicine, tratando a nutrição como ciência de precisão para alcançar resultados
+                    consistentes e acelerados.</p>
+                <div class="contact-footer">
+                    <p><i class="fab fa-whatsapp"></i> (19) 98332-1302</p>
+                    <p><i class="fas fa-envelope"></i> isabelamunoznutri@hotmail.com</p>
+                </div>
+            </div>
+
+            <div class="footer-section links">
+                <h3>Navegação</h3>
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="solucao.html">Solução</a></li>
+                    <li><a href="sobre.html">Sobre mim</a></li>
+                    <li><a href="planos.html">Planos</a></li>
+                    <li><a href="duvidas.html">Dúvidas</a></li>
+
+                    <li><a href="cupons.html">Cupons</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section security">
+                <h3>Segurança</h3>
+                <ul>
+                    <li><a href="privacidade.html">Política de Privacidade</a></li>
+                    <li><a href="cookies.html">Política de Cookies</a></li>
+                    <li><a href="termos.html">Termos & Uso</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section social">
+                <h3>Siga-me</h3>
+                <div class="social-icons-footer">
+                    <a href="https://instagram.com/nutri.isabelamunoz" target="_blank" aria-label="Instagram"><i
+                            class="fab fa-instagram"></i></a>
+                    <a href="https://wa.me/5519983321302" target="_blank" aria-label="WhatsApp"><i
+                            class="fab fa-whatsapp"></i></a>
+                    <a href="https://www.doctoralia.com.br/isabela-munoz/nutricionista/campinas" target="_blank"
+                        aria-label="Doctoralia"><i class="fas fa-user-md"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Isabela Muñoz. Todos os direitos reservados. <span class="separator">|</span> Desenvolvido
+                por <a href="https://wa.me/5519998790929" target="_blank" class="developer-link">Renan Sousa <i
+                        class="fab fa-whatsapp"></i></a></p>
+        </div>
+    </footer>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2 id="modal-title"></h2>
+            <p id="modal-text"></p>
+            <a href="https://wa.me/5519983321302" class="modal-cta-button">Agende sua consulta no WhatsApp</a>
+        </div>
+    </div>
+
+    <!-- Chat Bot -->
+    <button class="chat-bot-button" id="chatButton" aria-label="Abrir chat com assistente nutricional">
+        <img src="assets/images/mascote.png" alt="Chat Bot Mascote">
+    </button>
+
+    <div class="chat-container" id="chatContainer">
+        <div class="chat-header">
+            <img src="assets/images/mascote.png" alt="Assistente">
+            <h3>Assistente Nutricional</h3>
+        </div>
+        <div class="chat-messages" id="chatMessages">
+            <div class="message bot-message">
+                Olá! Eu sou o assistente nutricional da Isabela. Como posso ajudar você hoje?
+            </div>
+        </div>
+        <div class="chat-input">
+            <input type="text" id="chatInput" placeholder="Digite sua mensagem...">
+            <button onclick="sendMessage()">Enviar</button>
+        </div>
+    </div>
+
+    <script src="chat.js"></script>
     <script>
+        const planDetails = {
+            'fast': {
+                title: 'Essence',
+                text: `<strong>O Equilíbrio em Cada Detalhe</strong><br><br>
+                O plano Essence foi desenhado para quem busca excelência e praticidade em ajustes pontuais. Ele é a escolha ideal para quem não necessita de um acompanhamento prolongado, mas não abre mão de uma orientação especializada para alinhar seus objetivos de forma estratégica.<br><br>
+                Nesta modalidade, você conta com uma estrutura completa para resultados imediatos:<br><br>
+                • Duas consultas presenciais para um ajuste fino da sua evolução.<br>
+                • Plano alimentar personalizado desenvolvido em cada atendimento.<br>
+                • Avaliações de Bioimpedância inclusas, garantindo precisão na análise da sua composição corporal.<br>
+                • Suporte via WhatsApp durante todo o período, para que você nunca esteja sozinho na sua jornada.<br><br>
+                O Essence oferece a solução perfeita para quem precisa de foco, técnica e um plano de ação direto ao ponto.<br><br>
+            `
+            },
+            'sinergy': {
+                title: 'Premium',
+                text: `<strong>A Jornada para sua Melhor Versão</strong><br><br>
+                O plano Premium foi desenvolvido para quem não busca apenas orientações, mas uma mudança real e definitiva em seu estilo de vida. É o acompanhamento ideal para quem está comprometido com uma transformação profunda, oferecendo o suporte necessário para consolidar novos hábitos e alcançar resultados sólidos a longo prazo.<br><br>
+                Com uma estrutura robusta e exclusiva, você terá todo o suporte para sua evolução:<br><br>
+                • Três consultas presenciais, permitindo um monitoramento detalhado e contínuo de cada etapa do seu progresso.<br>
+                • Um plano alimentar personalizado por consulta, adaptado dinamicamente às suas novas necessidades e conquistas.<br>
+                • Até 5 meses de acompanhamento, garantindo o tempo necessário para que a mudança se torne parte da sua identidade.<br>
+                • Suporte via WhatsApp durante todo o período, para esclarecer dúvidas e manter a motivação no ápice.<br>
+                • Três Bioimpedâncias inclusas como BÔNUS, para mensurarmos com precisão científica a sua transformação corporal.<br><br>
+                O Premium não é apenas um plano, é um investimento na sua saúde para quem decidiu que o momento de mudar é agora.`
+            },
+            'transform': {
+                title: 'Legacy',
+                text: `<strong>Legacy New Intensive: A Elite da Performance Nutricional</strong><br><br>
+                Para quem não aceita nada menos que o extraordinário, apresentamos o Legacy New Intensive. Este é o nosso acompanhamento de elite, desenvolvido especificamente para quem busca resultados de alto impacto em um curto espaço de tempo através de uma metodologia intensiva e altamente personalizada.<br><br>
+                Este plano oferece a máxima proximidade e as ferramentas mais avançadas para transformar sua saúde:<br><br>
+                • Acompanhamento Ultra-Intensivo: 5 consultas estratégicas, sendo 3 presenciais e 2 online, garantindo uma vigilância constante da sua evolução.<br>
+                • Suporte via WhatsApp Prioritário: Acesso direto e preferencial para ajustes em tempo real e resolução de dúvidas, mantendo o foco total na sua meta.<br>
+                • Precisão Científica: Três avaliações de Bioimpedância inclusas como bônus para monitorar cada grama de mudança na sua composição corporal.<br>
+                • Estratégia Dinâmica: Um plano alimentar exclusivo elaborado a cada consulta, adaptando-se às suas respostas metabólicas imediatas.<br>
+                • Experiência Completa: Recebimento do exclusivo Kit Nutri, elevando sua jornada a um novo patamar de cuidado e sofisticação.<br>
+                • Resultados em 3 meses: Todo esse suporte concentrado para consolidar sua transformação no período de até 3 meses.<br><br>
+                O Legacy é para aqueles que exigem o melhor suporte técnico e a maior dedicação para deixar um verdadeiro legado em sua própria saúde.`
+            }
+        };
+
+        function openModal(planType) {
+            const modal = document.getElementById('modal');
+            const modalTitle = document.getElementById('modal-title');
+            const modalText = document.getElementById('modal-text');
+
+            modal.style.display = "block";
+            modalTitle.textContent = planDetails[planType].title;
+            modalText.innerHTML = planDetails[planType].text;
+        }
+
+        document.querySelector('.close-button').onclick = function () {
+            document.getElementById('modal').style.display = "none";
+        }
+
+        window.onclick = function (event) {
+            const modal = document.getElementById('modal');
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+
         const header = document.getElementById('header');
         window.addEventListener('scroll', () => {
             if (window.scrollY > 50) {
@@ -58,6 +268,22 @@
                 header.classList.remove('scrolled');
             }
         });
+
+        // Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.plan-card').forEach(el => observer.observe(el));
     </script>
 </body>
 

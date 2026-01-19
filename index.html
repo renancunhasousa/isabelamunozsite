@@ -37,27 +37,32 @@
                     <img src="assets/images/logo_assinatura.png" alt="Logo Isabela Muñoz" class="logo-signature">
                 </div>
 
+                <button class="mobile-menu-btn" aria-label="Abrir Menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+
                 <ul class="nav-links">
                     <li><a href="index.html" class="active">Início</a></li>
                     <li><a href="solucao.html">Solução</a></li>
                     <li><a href="sobre.html">Sobre mim</a></li>
                     <li><a href="planos.html">Planos</a></li>
                     <li><a href="duvidas.html">Dúvidas</a></li>
-                    <li><a href="blog.html">Blog</a></li>
+
                     <li><a href="cupons.html">Cupons</a></li>
                     <li><a href="contato.html">Contato</a></li>
                 </ul>
 
                 <div class="social-icons">
                     <a href="https://instagram.com/nutri.isabelamunoz" target="_blank" class="social-icon"
-                        aria-label="Instagram">
+                        aria-label="Siga no Instagram">
                         <i class="fab fa-instagram"></i>
                     </a>
-                    <a href="https://wa.me/5519983321302" target="_blank" class="social-icon" aria-label="WhatsApp">
+                    <a href="https://wa.me/5519983321302" target="_blank" class="social-icon"
+                        aria-label="Contato WhatsApp">
                         <i class="fab fa-whatsapp"></i>
                     </a>
                     <a href="https://www.doctoralia.com.br/isabela-munoz/nutricionista/campinas" target="_blank"
-                        class="social-icon" aria-label="Doctoralia">
+                        class="social-icon" aria-label="Página Doctoralia">
                         <i class="fas fa-user-md"></i>
                     </a>
                 </div>
@@ -282,7 +287,7 @@
                     <li><a href="sobre.html">Sobre mim</a></li>
                     <li><a href="planos.html">Planos</a></li>
                     <li><a href="duvidas.html">Dúvidas</a></li>
-                    <li><a href="blog.html">Blog</a></li>
+
                     <li><a href="cupons.html">Cupons</a></li>
                     <li><a href="contato.html">Contato</a></li>
                 </ul>
@@ -411,6 +416,17 @@
 
         // Controle do Header ao rolar a página
         const header = document.getElementById('header');
+        const mobileBtn = document.querySelector('.mobile-menu-btn');
+        const navLinks = document.querySelector('.nav-links');
+
+        if (mobileBtn) {
+            mobileBtn.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+                mobileBtn.querySelector('i').classList.toggle('fa-bars');
+                mobileBtn.querySelector('i').classList.toggle('fa-times');
+            });
+        }
+
         window.addEventListener('scroll', () => {
             if (window.scrollY > 50) {
                 header.classList.add('scrolled');
