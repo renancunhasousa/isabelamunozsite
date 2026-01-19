@@ -2501,7 +2501,7 @@ form {
 
 /* Performance Track Specifics */
 .track-card.performance {
-    background: linear-gradient(to bottom, rgba(46, 204, 113, 0.1), rgba(46, 204, 113, 0.1)), url('d:/Sites/SiteMozona/2.0/assets/images/new_background.png');
+    background: linear-gradient(to bottom, rgba(46, 204, 113, 0.1), rgba(46, 204, 113, 0.1)), url('assets/images/new_background.png');
     background-size: cover;
     background-position: center;
     border-top: 3px solid #2ecc71;
@@ -2520,7 +2520,7 @@ form {
 
 /* Vitality Track Specifics */
 .track-card.vitality {
-    background: linear-gradient(to bottom, rgba(231, 76, 60, 0.1), rgba(231, 76, 60, 0.1)), url('d:/Sites/SiteMozona/2.0/assets/images/new_background.png');
+    background: linear-gradient(to bottom, rgba(231, 76, 60, 0.1), rgba(231, 76, 60, 0.1)), url('assets/images/new_background.png');
     background-size: cover;
     background-position: center;
     border-top: 3px solid #e74c3c;
