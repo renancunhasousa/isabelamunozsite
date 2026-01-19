@@ -1877,17 +1877,41 @@ form {
         display: none;
     }
 
+    /* Navegação */
+    .nav-bar {
+        padding: 15px 20px;
+        justify-content: space-between;
+    }
+
+    .nav-container {
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .nav-links,
+    .social-icons {
+        display: none;
+    }
+
     .separator {
         display: none;
     }
 
     .logo-container {
-        width: 100%;
-        justify-content: center;
+        width: auto;
+        justify-content: flex-start;
+        flex: 1;
     }
 
     .logo-container img {
-        height: 30px;
+        height: 35px;
+    }
+
+    /* Mobile Menu Button is visible */
+    .mobile-menu-btn {
+        display: block;
+        margin-left: auto;
+        font-size: 1.5rem;
     }
 
     /* Hero Section */
@@ -2800,6 +2824,7 @@ form {
 
     .nav-links.active {
         right: 0;
+        display: flex !important;
     }
 
     .nav-links li {
