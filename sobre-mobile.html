@@ -16,10 +16,130 @@
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <script>
-        if (window.innerWidth <= 768) {
-            window.location.href = 'sobre-mobile.html';
+        // Se a tela for maior que 768px, usa a versão desktop
+        if (window.innerWidth > 768) {
+            window.location.href = 'sobre.html';
         }
     </script>
+    <style>
+        /* Estilos específicos para a hero mobile */
+        .mobile-about-content {
+            padding: 100px 20px 0px;
+            background: var(--gradient-bg);
+            min-height: auto;
+        }
+
+        .mobile-hero-image-container {
+            position: relative;
+            width: 100%;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .mobile-hero-image-container img {
+            width: 100%;
+            max-width: 350px;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(245, 227, 192, 0.3);
+        }
+
+        .mobile-about-text h1 {
+            font-family: 'Allison', cursive;
+            font-size: 5rem;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .mobile-about-text h2 {
+            font-family: 'Amiri', serif;
+            font-size: 1.8rem;
+            color: var(--text-color);
+            margin-bottom: 25px;
+            text-align: center;
+            line-height: 1.2;
+        }
+
+        .mobile-about-card {
+            background: rgba(46, 42, 37, 0.6);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(245, 227, 192, 0.2);
+            padding: 30px 20px;
+            border-radius: 25px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .mobile-about-card h3 {
+            font-family: 'Amiri', serif;
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .mobile-about-card p {
+            font-size: 1rem;
+            line-height: 1.7;
+            color: var(--text-color);
+            margin-bottom: 15px;
+        }
+
+        .mobile-stats-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .mobile-stat-box {
+            background: rgba(245, 227, 192, 0.05);
+            padding: 15px;
+            border-radius: 15px;
+            text-align: center;
+            border: 1px solid rgba(245, 227, 192, 0.1);
+        }
+
+        .mobile-stat-box span {
+            display: block;
+            color: var(--primary-color);
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+
+        .mobile-stat-box label {
+            font-size: 0.8rem;
+            color: var(--text-color);
+            opacity: 0.8;
+        }
+
+        .cta-mobile {
+            display: block;
+            width: 100%;
+            text-align: center;
+            background: linear-gradient(45deg, var(--primary-color), #f5e3c0);
+            color: #4a3c31;
+            padding: 18px;
+            border-radius: 15px;
+            text-decoration: none;
+            font-weight: 700;
+            font-family: 'Amiri', serif;
+            margin-top: 10px;
+            margin-bottom: 40px;
+            font-size: 1.1rem;
+            box-shadow: 0 10px 20px rgba(243, 169, 80, 0.2);
+        }
+
+        /* Ajustes para integrar com as seções desktop */
+        .performance-section {
+            padding-top: 60px !important;
+            margin-top: 0 !important;
+            border-radius: 0 !important;
+        }
+    </style>
 </head>
 
 <body>
@@ -41,7 +161,6 @@
                     <li class="mobile-only"><a href="sobre-mobile.html" class="active">Sobre mim</a></li>
                     <li><a href="planos.html">Planos</a></li>
                     <li><a href="duvidas.html">Dúvidas</a></li>
-
                     <li><a href="cupons.html">Cupons</a></li>
                     <li><a href="contato.html">Contato</a></li>
                 </ul>
@@ -59,16 +178,37 @@
     </header>
 
     <main>
-        <section class="about-hero-section">
-            <div class="hero-container">
-                <img src="assets/images/isa_sentada.png" alt="Sobre Isabela Muñoz" class="about-hero-image">
+        <!-- APENAS ESTA SEÇÃO É DIFERENTE NO MOBILE -->
+        <section class="mobile-about-content">
+            <div class="mobile-hero-image-container">
+                <img src="assets/images/isa_sentada.png" alt="Isabela Muñoz">
+            </div>
 
-                <img src="assets/images/isa_2.png" alt="Estatísticas" class="float-badge badge-top">
-                <img src="assets/images/isa_3.png" alt="Certificações" class="float-badge badge-left">
-                <img src="assets/images/isa_1.png" alt="Especialista" class="float-badge badge-right">
+            <div class="mobile-about-text">
+                <h1>Sobre mim</h1>
+                <h2>Isabela Muñoz</h2>
+
+                <div class="mobile-about-card">
+                    <h3><i class="fas fa-graduation-cap"></i> Trajetória e Formação</h3>
+                    <p>Especialista em Nutrição Esportiva e Clínica, com foco em resultados estéticos e performance de
+                        elite.</p>
+                    <div class="mobile-stats-grid">
+                        <div class="mobile-stat-box">
+                            <span>+3000</span>
+                            <label>Vidas Impactadas</label>
+                        </div>
+                        <div class="mobile-stat-box">
+                            <span>8</span>
+                            <label>Países Atendidos</label>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="https://wa.me/5519983321302" class="cta-mobile">Agendar Minha Consulta</a>
             </div>
         </section>
 
+        <!-- REUTILIZANDO AS SEÇÕES DO DESKTOP -->
         <section class="performance-section">
             <div class="performance-container">
                 <div class="performance-text">
@@ -117,8 +257,6 @@
                 </div>
             </div>
         </section>
-
-        <!-- Placeholder for future content -->
     </main>
 
     <footer class="main-footer">
@@ -126,76 +264,23 @@
             <div class="footer-section main-info">
                 <img src="assets/images/logo_assinatura.png" alt="Isabela Muñoz" class="footer-logo">
                 <p class="methodology-text">Metodologia fundamentada na Certificação Internacional do American College
-                    of Sports Medicine, tratando a nutrição como ciência de precisão para alcançar resultados
-                    consistentes e acelerados.</p>
-                <div class="contact-footer">
-                    <p><i class="fab fa-whatsapp"></i> (19) 98332-1302</p>
-                    <p><i class="fas fa-envelope"></i> isabelamunoznutri@hotmail.com</p>
-                </div>
-            </div>
-
-            <div class="footer-section links">
-                <h3>Navegação</h3>
-                <ul>
-                    <li><a href="index.html">Início</a></li>
-                    <li><a href="solucao.html">Solução</a></li>
-                    <li><a href="sobre.html">Sobre mim</a></li>
-                    <li><a href="planos.html">Planos</a></li>
-                    <li><a href="duvidas.html">Dúvidas</a></li>
-
-                    <li><a href="cupons.html">Cupons</a></li>
-                    <li><a href="contato.html">Contato</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-section security">
-                <h3>Segurança</h3>
-                <ul>
-                    <li><a href="privacidade.html">Política de Privacidade</a></li>
-                    <li><a href="cookies.html">Política de Cookies</a></li>
-                    <li><a href="termos.html">Termos & Uso</a></li>
-                </ul>
+                    of Sports Medicine.</p>
             </div>
 
             <div class="footer-section social">
-                <h3>Siga-me</h3>
                 <div class="social-icons-footer">
-                    <a href="https://instagram.com/nutri.isabelamunoz" target="_blank" aria-label="Instagram"><i
+                    <a href="https://instagram.com/nutri.isabelamunoz" target="_blank"><i
                             class="fab fa-instagram"></i></a>
-                    <a href="https://wa.me/5519983321302" target="_blank" aria-label="WhatsApp"><i
-                            class="fab fa-whatsapp"></i></a>
-                    <a href="https://www.doctoralia.com.br/isabela-munoz/nutricionista/campinas" target="_blank"
-                        aria-label="Doctoralia"><i class="fas fa-user-md"></i></a>
+                    <a href="https://wa.me/5519983321302" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://www.doctoralia.com.br/isabela-munoz/nutricionista/campinas" target="_blank"><i
+                            class="fas fa-user-md"></i></a>
                 </div>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2026 Isabela Muñoz. Todos os direitos reservados. <span class="separator">|</span> Desenvolvido
-                por <a href="https://wa.me/5519998790929" target="_blank" class="developer-link">Renan Sousa <i
-                        class="fab fa-whatsapp"></i></a></p>
+            <p>&copy; 2026 Isabela Muñoz.</p>
         </div>
     </footer>
-
-    <!-- Chat Bot -->
-    <button class="chat-bot-button" id="chatButton" aria-label="Abrir chat com assistente nutricional">
-        <img src="assets/images/mascote.png" alt="Chat Bot Mascote">
-    </button>
-
-    <div class="chat-container" id="chatContainer">
-        <div class="chat-header">
-            <img src="assets/images/mascote.png" alt="Assistente">
-            <h3>Assistente Nutricional</h3>
-        </div>
-        <div class="chat-messages" id="chatMessages">
-            <div class="message bot-message">
-                Olá! Eu sou o assistente nutricional da Isabela. Como posso ajudar você hoje?
-            </div>
-        </div>
-        <div class="chat-input">
-            <input type="text" id="chatInput" placeholder="Digite sua mensagem...">
-            <button onclick="sendMessage()">Enviar</button>
-        </div>
-    </div>
 
     <script src="chat.js"></script>
     <script>
@@ -217,7 +302,7 @@
             }
         });
 
-        // Observer for animations
+        // Observer para as imagens em destaque
         const observerOptions = {
             threshold: 0.1,
             rootMargin: '0px 0px -50px 0px'
@@ -227,13 +312,11 @@
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('visible');
-                    // Stop observing once visible if disjoint animation isn't desired
-                    // observer.unobserve(entry.target); 
                 }
             });
         }, observerOptions);
 
-        document.querySelectorAll('.float-badge').forEach(el => observer.observe(el));
+        document.querySelectorAll('.img-blend').forEach(el => observer.observe(el));
     </script>
 </body>
 
