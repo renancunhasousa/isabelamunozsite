@@ -29,6 +29,7 @@ body {
     line-height: 1.6;
     color: var(--text-color);
     background: var(--gradient-bg);
+    zoom: 0.9;
 }
 
 /* Cabeçalho Fixo e Assinatura */
@@ -2770,7 +2771,8 @@ form {
 .solution-hero-modifier {
     min-height: 50vh !important;
     padding-bottom: 180px;
-    background-image: url('assets/images/new_bkg1.png') !important; /* Moved image from .hero-image container */
+    background-image: url('assets/images/new_bkg1.png') !important;
+    /* Moved image from .hero-image container */
     background-size: cover !important;
     background-position: center !important;
     background-repeat: no-repeat !important;
@@ -2794,7 +2796,8 @@ form {
 }
 
 .solution-hero-modifier .hero-image img {
-    display: none; /* Hidden to avoid duplication, as its content is now the background of the parent */
+    display: none;
+    /* Hidden to avoid duplication, as its content is now the background of the parent */
     -webkit-mask-image: linear-gradient(to right, transparent 0%, black 20%, black 80%, transparent 100%), linear-gradient(to bottom, black 0%, black 70%, transparent 100%) !important;
     -webkit-mask-composite: source-in !important;
     mask-image: linear-gradient(to right, transparent 0%, black 20%, black 80%, transparent 100%), linear-gradient(to bottom, black 0%, black 70%, transparent 100%) !important;
@@ -4135,7 +4138,7 @@ form {
     .faq-hero h1 {
         font-size: 4rem;
     }
-    
+
     .faq-hero {
         padding: 120px 20px 60px;
     }
@@ -4361,7 +4364,7 @@ form {
     .faq-hero h1 {
         font-size: 4rem;
     }
-    
+
     .faq-hero {
         padding: 120px 20px 60px;
     }
