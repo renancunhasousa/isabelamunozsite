@@ -206,6 +206,12 @@
     font-size: 7rem !important;
 }
 
+@media (max-width: 768px) {
+    .plans h2 {
+        font-size: 5.0em !important;
+    }
+}
+
 /* Fix Zoom Effect for Vision and Values */
 .mvv-item.vision:hover {
     transform: translateY(-50%) scale(1.05) !important;
