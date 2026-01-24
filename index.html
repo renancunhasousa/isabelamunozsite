@@ -44,13 +44,20 @@
                 <ul class="nav-links">
                     <li><a href="index.html" class="active">Início</a></li>
                     <li><a href="solucao.html">Solução</a></li>
-                    <li class="desktop-only"><a href="sobre.html">Sobre mim</a></li>
-                    <li class="mobile-only"><a href="sobre-mobile.html">Sobre mim</a></li>
+                    <li><a href="sobre.html">Sobre mim</a></li>
                     <li><a href="planos.html">Planos</a></li>
                     <li><a href="duvidas.html">Dúvidas</a></li>
 
                     <li><a href="cupons.html">Cupons</a></li>
                     <li><a href="contato.html">Contato</a></li>
+                    <li class="mobile-social-menu mobile-only">
+                        <a href="https://instagram.com/nutri.isabelamunoz" target="_blank" class="social-icon"><i
+                                class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/5519983321302" target="_blank" class="social-icon"><i
+                                class="fab fa-whatsapp"></i></a>
+                        <a href="https://www.doctoralia.com.br/isabela-munoz/nutricionista/campinas" target="_blank"
+                            class="social-icon"><i class="fas fa-user-md"></i></a>
+                    </li>
                 </ul>
 
                 <div class="social-icons">
@@ -71,9 +78,7 @@
         </nav>
     </header>
 
-    <a href="https://wa.me/5519983321302" class="whatsapp-float" aria-label="Agendar consulta pelo WhatsApp">
-        <i class="fab fa-whatsapp"></i>
-    </a>
+
 
     <main>
         <section id="inicio" class="hero">
@@ -236,11 +241,27 @@
                     </div>
                 </div>
 
-                <div class="map-container">
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3675.356219020248!2d-47.06378788503453!3d-22.906399785015155!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c8c8f6a9554c91%3A0x16b5b1c058ca6b70!2sR.%20Bar%C3%A3o%20de%20Jaguara%2C%20655%20-%20Centro%2C%20Campinas%20-%20SP%2C%2013015-001!5e0!3m2!1spt-BR!2sbr!4v1647887642324!5m2!1spt-BR!2sbr"
-                        width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy">
-                    </iframe>
+                <div class="maps-wrapper">
+                    <div class="map-container">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3675.356219020248!2d-47.06378788503453!3d-22.906399785015155!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c8c8f6a9554c91%3A0x16b5b1c058ca6b70!2sR.%20Bar%C3%A3o%20de%20Jaguara%2C%20655%20-%20Centro%2C%20Campinas%20-%20SP%2C%2013015-001!5e0!3m2!1spt-BR!2sbr!4v1647887642324!5m2!1spt-BR!2sbr"
+                            width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy">
+                        </iframe>
+                    </div>
+                    <div class="map-container">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!4v1769261748372!6m8!1m7!1shl2EK-cCa6uEGuCwkOoFUg!2m2!1d-22.90856955777021!2d-47.05694114398221!3f254.40424965904586!4f5.127238546342753!5f0.7820865974627469"
+                            width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+
+                <!-- Elfsight Google Reviews Widget Lux -->
+                <h2 class="reviews-title">O que dizem nossos pacientes</h2>
+                <div class="reviews-lux-container">
+                    <script src="https://elfsightcdn.com/platform.js" async></script>
+                    <div class="elfsight-app-9818f52c-cea1-45ab-b769-a933845beb37" data-elfsight-app-lazy></div>
                 </div>
             </div>
 
@@ -343,7 +364,7 @@
         </div>
         <div class="chat-messages" id="chatMessages">
             <div class="message bot-message">
-                Olá! Eu sou o assistente nutricional da Isabela. Como posso ajudar você hoje?
+                Olá! Eu sou a Nutrita! Assistente nutricional da Dra. Isabela. Como posso ajudar você hoje?
             </div>
         </div>
         <div class="chat-input">
@@ -456,21 +477,7 @@
             observer.observe(el);
         });
 
-        // Adicione este script para mostrar/ocultar o botão flutuante em mobile
-        document.addEventListener('DOMContentLoaded', function () {
-            const whatsappFloat = document.querySelector('.whatsapp-float');
 
-            function toggleWhatsappButton() {
-                if (window.innerWidth <= 768) {
-                    whatsappFloat.style.display = 'block';
-                } else {
-                    whatsappFloat.style.display = 'none';
-                }
-            }
-
-            window.addEventListener('resize', toggleWhatsappButton);
-            toggleWhatsappButton(); // Executa ao carregar
-        });
     </script>
 </body>
 

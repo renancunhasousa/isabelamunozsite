@@ -13,15 +13,15 @@ const chatContainer = document.querySelector('.chat-container');
 function addMessage(message, sender) {
     const messageDiv = document.createElement('div');
     messageDiv.classList.add('message', `${sender}-message`);
-    
+
     // Criar o conteúdo da mensagem
     const contentDiv = document.createElement('div');
     contentDiv.classList.add('message-content');
     contentDiv.textContent = message;
-    
+
     messageDiv.appendChild(contentDiv);
     chatMessages.appendChild(messageDiv);
-    
+
     // Rolar para a última mensagem
     chatMessages.scrollTop = chatMessages.scrollHeight;
 }
@@ -34,22 +34,22 @@ async function callChatGPT(message) {
             headers: {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify({ 
+            body: JSON.stringify({
                 message,
-                userId 
+                userId
             })
         });
-        
+
         const data = await response.json();
-        
+
         if (!response.ok) {
             throw new Error(data.details || data.error || `Erro HTTP: ${response.status}`);
         }
-        
+
         if (!data.response) {
             throw new Error('Resposta inválida do servidor');
         }
-        
+
         console.log('Resposta recebida:', data.response);
         return data.response;
     } catch (error) {
@@ -63,7 +63,7 @@ async function sendMessage() {
     const input = document.getElementById('chatInput');
     const message = input.value.trim();
     const chatMessages = document.getElementById('chatMessages');
-    
+
     if (!message) return;
 
     // Adiciona mensagem do usuário
@@ -74,25 +74,25 @@ async function sendMessage() {
     `;
 
     input.value = '';
-    
+
     try {
         const response = await fetch('/api/chat', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify({ 
+            body: JSON.stringify({
                 message,
                 userId: 'user-' + Date.now() // Identificador único para o usuário
             })
         });
-        
+
         const data = await response.json();
-        
+
         if (!response.ok) {
             throw new Error(data.details || data.error || `Erro HTTP: ${response.status}`);
         }
-        
+
         // Adiciona resposta do bot
         chatMessages.innerHTML += `
             <div class="message bot-message">
@@ -113,7 +113,7 @@ async function sendMessage() {
 }
 
 // Event Listeners
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     // Configuração do botão FAQ
     const faqButton = document.querySelector('.faq-button');
     if (faqButton) {
@@ -132,7 +132,7 @@ document.addEventListener('DOMContentLoaded', function() {
             if (wasActive) {
                 chatMessages.innerHTML = '';
                 // Adicionar mensagem inicial do bot
-                addMessage("Olá! Eu sou o assistente nutricional da Isabela. Como posso ajudar você hoje?", 'bot');
+                addMessage("Olá! Eu sou a Nutrita! Assistente nutricional da Dra. Isabela. Como posso ajudar você hoje?", 'bot');
             }
         });
     }
@@ -144,7 +144,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Configuração do input para enviar com Enter
     if (chatInput) {
-        chatInput.addEventListener('keypress', function(e) {
+        chatInput.addEventListener('keypress', function (e) {
             if (e.key === 'Enter') {
                 sendMessage();
             }
@@ -161,7 +161,7 @@ window.addEventListener('beforeunload', () => {
 if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
     const chatInput = document.querySelector('.chat-input input');
     const chatContainer = document.querySelector('.chat-container');
-    
+
     chatInput.addEventListener('focus', () => {
         setTimeout(() => {
             chatContainer.style.height = '40vh';
@@ -181,10 +181,10 @@ if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
 document.addEventListener('click', (e) => {
     const chatContainer = document.querySelector('.chat-container');
     const chatButton = document.querySelector('.chat-bot-button');
-    
+
     if (window.innerWidth <= 768) {
-        if (!chatContainer.contains(e.target) && 
-            !chatButton.contains(e.target) && 
+        if (!chatContainer.contains(e.target) &&
+            !chatButton.contains(e.target) &&
             chatContainer.classList.contains('active')) {
             chatContainer.classList.remove('active');
             chatButton.classList.remove('chat-open');

@@ -15,11 +15,6 @@
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600&family=Arimo:wght@400;500;600;700&family=Allison&family=Amiri:wght@400;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <script>
-        if (window.innerWidth <= 768) {
-            window.location.href = 'sobre-mobile.html';
-        }
-    </script>
 </head>
 
 <body>
@@ -37,13 +32,19 @@
                 <ul class="nav-links">
                     <li><a href="index.html">Início</a></li>
                     <li><a href="solucao.html">Solução</a></li>
-                    <li class="desktop-only"><a href="sobre.html" class="active">Sobre mim</a></li>
-                    <li class="mobile-only"><a href="sobre-mobile.html" class="active">Sobre mim</a></li>
+                    <li><a href="sobre.html" class="active">Sobre mim</a></li>
                     <li><a href="planos.html">Planos</a></li>
                     <li><a href="duvidas.html">Dúvidas</a></li>
-
                     <li><a href="cupons.html">Cupons</a></li>
                     <li><a href="contato.html">Contato</a></li>
+                    <li class="mobile-social-menu mobile-only">
+                        <a href="https://instagram.com/nutri.isabelamunoz" target="_blank" class="social-icon"><i
+                                class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/5519983321302" target="_blank" class="social-icon"><i
+                                class="fab fa-whatsapp"></i></a>
+                        <a href="https://www.doctoralia.com.br/isabela-munoz/nutricionista/campinas" target="_blank"
+                            class="social-icon"><i class="fas fa-user-md"></i></a>
+                    </li>
                 </ul>
 
                 <div class="social-icons">
@@ -59,16 +60,47 @@
     </header>
 
     <main>
-        <section class="about-hero-section">
+        <!-- VERSÃO DESKTOP DA HERO -->
+        <section class="about-hero-section desktop-only">
             <div class="hero-container">
                 <img src="assets/images/isa_sentada.png" alt="Sobre Isabela Muñoz" class="about-hero-image">
-
                 <img src="assets/images/isa_2.png" alt="Estatísticas" class="float-badge badge-top">
                 <img src="assets/images/isa_3.png" alt="Certificações" class="float-badge badge-left">
                 <img src="assets/images/isa_1.png" alt="Especialista" class="float-badge badge-right">
             </div>
         </section>
 
+        <!-- VERSÃO MOBILE DA HERO -->
+        <section class="mobile-about-content mobile-only">
+            <div class="mobile-hero-image-container">
+                <img src="assets/images/isa_sentada.png" alt="Isabela Muñoz">
+            </div>
+
+            <div class="mobile-about-text">
+                <h1>Sobre mim</h1>
+                <h2>Isabela Muñoz</h2>
+
+                <div class="mobile-about-card">
+                    <h3><i class="fas fa-graduation-cap"></i> Trajetória e Formação</h3>
+                    <p>Especialista em Nutrição Esportiva e Clínica, com foco em resultados estéticos e performance de
+                        elite.</p>
+                    <div class="mobile-stats-grid">
+                        <div class="mobile-stat-box">
+                            <span>+3000</span>
+                            <label>Vidas Impactadas</label>
+                        </div>
+                        <div class="mobile-stat-box">
+                            <span>8</span>
+                            <label>Países Atendidos</label>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="https://wa.me/5519983321302" class="cta-mobile">Agendar Minha Consulta</a>
+            </div>
+        </section>
+
+        <!-- SEÇÕES COMPARTILHADAS (REORGANIZADAS NO MOBILE VIA CSS) -->
         <section class="performance-section">
             <div class="performance-container">
                 <div class="performance-text">
@@ -96,12 +128,13 @@
         <section class="care-section">
             <div class="care-container">
                 <div class="care-image">
-                    <img src="assets/images/escritorio.png" alt="Meu Escritório">
+                    <img src="assets/images/escritorio2.jpeg" alt="Meu Escritório">
                 </div>
                 <div class="care-text">
                     <span class="subtitle">Empatia e Ciência</span>
                     <h2>O Cuidado em Cada Detalhe</h2>
-                    <p>Minha experiência em <strong>hospitais e escolas</strong> me ensinou que a nutrição é a base para
+                    <p>Minha experiência <strong>em nutrição clínica e educação alimentar</strong> me ensinou que a
+                        nutrição é a base para
                         uma vida plena. Ver a transformação na saúde das pessoas é o que me motiva diariamente.</p>
 
                     <div class="care-pillars">
@@ -117,11 +150,10 @@
                 </div>
             </div>
         </section>
-
-        <!-- Placeholder for future content -->
     </main>
 
-    <footer class="main-footer">
+    <!-- FOOTER DESKTOP -->
+    <footer class="main-footer desktop-only">
         <div class="footer-container">
             <div class="footer-section main-info">
                 <img src="assets/images/logo_assinatura.png" alt="Isabela Muñoz" class="footer-logo">
@@ -142,7 +174,6 @@
                     <li><a href="sobre.html">Sobre mim</a></li>
                     <li><a href="planos.html">Planos</a></li>
                     <li><a href="duvidas.html">Dúvidas</a></li>
-
                     <li><a href="cupons.html">Cupons</a></li>
                     <li><a href="contato.html">Contato</a></li>
                 </ul>
@@ -176,6 +207,30 @@
         </div>
     </footer>
 
+    <!-- FOOTER MOBILE -->
+    <footer class="main-footer mobile-only">
+        <div class="footer-container">
+            <div class="footer-section main-info">
+                <img src="assets/images/logo_assinatura.png" alt="Isabela Muñoz" class="footer-logo">
+                <p class="methodology-text">Metodologia fundamentada na Certificação Internacional do American College
+                    of Sports Medicine.</p>
+            </div>
+
+            <div class="footer-section social">
+                <div class="social-icons-footer">
+                    <a href="https://instagram.com/nutri.isabelamunoz" target="_blank"><i
+                            class="fab fa-instagram"></i></a>
+                    <a href="https://wa.me/5519983321302" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://www.doctoralia.com.br/isabela-munoz/nutricionista/campinas" target="_blank"><i
+                            class="fas fa-user-md"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Isabela Muñoz.</p>
+        </div>
+    </footer>
+
     <!-- Chat Bot -->
     <button class="chat-bot-button" id="chatButton" aria-label="Abrir chat com assistente nutricional">
         <img src="assets/images/mascote.png" alt="Chat Bot Mascote">
@@ -188,7 +243,7 @@
         </div>
         <div class="chat-messages" id="chatMessages">
             <div class="message bot-message">
-                Olá! Eu sou o assistente nutricional da Isabela. Como posso ajudar você hoje?
+                Olá! Eu sou a Nutrita! Assistente nutricional da Dra. Isabela. Como posso ajudar você hoje?
             </div>
         </div>
         <div class="chat-input">
@@ -217,7 +272,6 @@
             }
         });
 
-        // Observer for animations
         const observerOptions = {
             threshold: 0.1,
             rootMargin: '0px 0px -50px 0px'
@@ -227,13 +281,11 @@
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('visible');
-                    // Stop observing once visible if disjoint animation isn't desired
-                    // observer.unobserve(entry.target); 
                 }
             });
         }, observerOptions);
 
-        document.querySelectorAll('.float-badge').forEach(el => observer.observe(el));
+        document.querySelectorAll('.float-badge, .img-blend').forEach(el => observer.observe(el));
     </script>
 </body>
 
