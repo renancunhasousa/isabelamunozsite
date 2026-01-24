@@ -242,6 +242,10 @@ body {
     transform: scale(1.1);
 }
 
+.mobile-menu-btn {
+    display: none;
+}
+
 /* Seção de contato atualizada */
 .contact-grid {
     display: flex;
