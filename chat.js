@@ -1,3 +1,18 @@
+// Analytics tracking for "Agendar" clicks
+function trackAgendarClick(label) {
+    console.log('Tracking Agendar click:', label);
+    if (typeof gtag === 'function') {
+        gtag('event', 'agendar_click', {
+            'event_category': 'conversion',
+            'event_label': label || 'WhatsApp Link'
+        });
+    }
+    // Also track on Vercel Analytics if available
+    if (window.va) {
+        window.va('event', { name: 'agendar_click' });
+    }
+}
+
 // Criar um novo arquivo chat.js
 // Identificador único para o usuário (pode ser melhorado com um sistema de autenticação)
 const userId = 'user_' + Math.random().toString(36).substr(2, 9);
@@ -120,6 +135,26 @@ document.addEventListener('DOMContentLoaded', function () {
         faqButton.setAttribute('title', 'Dúvidas frequentes');
         faqButton.setAttribute('data-tooltip', 'Dúvidas frequentes');
     }
+
+    // Configuração de rastreamento de cliques em "Agendar" e WhatsApp
+    document.querySelectorAll('a[href*="wa.me"]').forEach(link => {
+        link.addEventListener('click', function () {
+            trackAgendarClick(this.innerText.trim() || 'WhatsApp Icon');
+        });
+    });
+
+    document.querySelectorAll('.cta-button, .cta-mobile, .modal-cta-button').forEach(button => {
+        button.addEventListener('click', function () {
+            const text = this.innerText.trim();
+            if (text.toLowerCase().includes('agendar') || text.toLowerCase().includes('consulta') || text.toLowerCase().includes('quero')) {
+                // Se já for um link wa.me, o listener acima já cuidou disso. 
+                // Mas garantimos que botões específicos também sejam rastreados.
+                if (!this.href || !this.href.includes('wa.me')) {
+                    trackAgendarClick(text);
+                }
+            }
+        });
+    });
 
     // Configuração do botão de chat
     if (chatButton) {
