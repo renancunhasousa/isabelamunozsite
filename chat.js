@@ -2,9 +2,15 @@
 function trackAgendarClick(label) {
     console.log('Tracking Agendar click:', label);
     if (typeof gtag === 'function') {
+        // Track on GA4
         gtag('event', 'agendar_click', {
             'event_category': 'conversion',
             'event_label': label || 'WhatsApp Link'
+        });
+
+        // Track on Google Ads
+        gtag('event', 'conversion', {
+            'send_to': 'AW-17904241748/Lxd3CK_cyO4bENSYtNlc'
         });
     }
     // Also track on Vercel Analytics if available
